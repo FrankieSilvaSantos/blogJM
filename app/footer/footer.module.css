@@ -1,0 +1,18 @@
+.spanFooter {
+
+    text-decoration: underline;
+    transition: 1s;
+
+}
+
+.spanFooter:hover {
+
+    color: white;
+
+}
+
+.linkStyles {
+
+    font-weight: 900;
+
+}
