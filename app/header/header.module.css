@@ -1,0 +1,31 @@
+.logoPositioning {
+
+    margin-left: -2%;
+    display: flex;
+
+}
+
+.tituloLogo {
+
+    color: white;
+    font-weight: 900;
+    margin-top: 1px;
+    margin-left: 5px;
+    font-size: 130%;
+
+}
+
+.buttonHeader {
+  left: 360%;
+}
+
+.navStyles {
+
+    border-bottom: 2px solid white;
+
+}
+
+.divLink {
+
+    margin-right: -3.3em;
+}
