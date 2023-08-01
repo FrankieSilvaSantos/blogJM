@@ -14,20 +14,27 @@ h1 {
     
 }
 
-
-
-body,html  {
-
+html,body,section {
     height: 100%;
     display: block;
 }
 
+
+main { 
+   position: relative;
+   min-height: 69vh;
+}
+
+
+
+
+
 footer {
 
     position: absolute;
-    display: block;
+        display: block;
     right: 0;
     left: 0;
-    bottom: 0;
+    bottom: auto;
 
 }

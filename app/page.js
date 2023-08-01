@@ -121,11 +121,11 @@ const graphqlApi = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
 {results.postsConnection.edges.map((result,index) => (
 
 
-    <a key={index} href="#" className={`flex flex-col items-center bg-violet-200 border border-purple-600 rounded-3xl shadow md:flex-row md:max-w-xl hover:bg-violet-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 ${styles.cardContainerHome}`}>
+    <a key={index} href="#" className={`flex flex-col  items-center bg-violet-200 border border-purple-600 rounded-3xl shadow md:flex-row md:max-w-xl hover:bg-violet-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 ${styles.cardContainerHome}`}>
 
     
    
- <img className={`object-cover w-full rounded-t-lg h-full md:h md:w-48 md:rounded-none md:rounded-l-lg ${styles.imgCharacterHome}`} src={result.node.featureImage.url} alt=""/>
+ <img className={`object-cover w-full rounded-t-lg max-h-full md:h md:w-48 md:rounded-none md:rounded-l-lg ${styles.imgCharacterHome}`} src={result.node.featureImage.url} alt=""/>
 
  <div className={`flex flex-col justify-between p-4 leading-normal ${styles.cardBody}`}>
      <h5 className="mb-2 text-2xl font-bold tracking-tight text-fuchsia-400 dark:text-white">{result.node.title}</h5>
