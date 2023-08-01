@@ -1,5 +1,63 @@
 .containerHome {
 
     margin-left: 3em;
+    margin-top: 5em;
     overflow: hidden;
+}
+
+.imgHome {
+    width: 5%;
+    height: 3vh;
+    display: inline;
+    margin-bottom: 5px;
+}
+
+.cardContainerHome {
+
+    height: 40vh;
+
+}
+
+.cardBody {
+
+    /* margin-bottom: 2em; */
+
+}
+
+.pHome {
+
+    display: inline;
+    margin-left: 0.2em; 
+    font-weight: 900;
+    
+}
+
+.pHome2 {
+
+    display: inline;
+    margin-left: 3em; 
+    font-weight: 900;
+    
+}
+
+.authorSpecsHome {
+
+    margin-top: 1em;
+
+}
+
+.iconHome {
+
+    color: black;
+    position: relative;
+    top: 2px;
+    color: rgb(245, 126, 245);
+    font-weight: 400;
+
+}
+
+.imgCharacterHome {
+
+    border-right: 2px solid rgb(231, 138, 231);
+
 }

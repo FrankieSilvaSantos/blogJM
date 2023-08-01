@@ -9,7 +9,7 @@
 
     color: white;
     font-weight: 900;
-    margin-top: 1px;
+    margin-top: 5px;
     margin-left: 5px;
     font-size: 130%;
 
@@ -28,4 +28,10 @@
 .divLink {
 
     margin-right: -3.3em;
+}
+
+.logoImgHome {
+    
+  
+
 }

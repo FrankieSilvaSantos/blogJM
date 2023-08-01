@@ -14,7 +14,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* ICONFY */}
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    {/* FAVICO */}
       <link rel="icon" href="/img/logo/logo.ico" sizes="any" />
+      
       </head>
       <body>
         <header><Header></Header></header>
