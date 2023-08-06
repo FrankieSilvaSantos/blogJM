@@ -134,7 +134,7 @@ const graphqlApi = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
         <section className={`${styles.authorSpecsHome}`}>
         <img className={`${styles.imgHome}`} src={result.node.photo.url}></img>
         <p className={`${styles.pHome} text-fuchsia-400`}>{result.node.name}</p>
-        <p className={`${styles.pHome2} text-fuchsia-400`}><span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span> {result.node.createdAt.substring(0,19).replace('T','->')}</p>
+        <p className={`${styles.pHome2} text-fuchsia-400`}><span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span> {result.node.createdAt.replace('T',' - ').substring(0,21)}</p>
         </section>
      ))}
 
