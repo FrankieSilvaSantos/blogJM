@@ -120,6 +120,32 @@ export default async function Home() {
                                          ))}
                                         </Link>
                                     </Slide>
+
+                                    <Slide index={3}>
+                                      <Link href={'#'} className={`${styles.linkStyles}`}>
+
+                                      {posts.filter((name) => name.node.title === 'isaac').map((post) => (
+                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                       
+                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                           
+                                            <div className=" bg-opacity-30 absolute w-full h-full p-6">
+                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
+                                            
+                                              
+                                          
+                                                <div className="flex h-full items-end pb-6">
+                                                <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
+                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
+                                                    
+                                                </div>
+                                              
+                                            </div>
+                                      
+                                        </div>
+                                         ))}
+                                        </Link>
+                                    </Slide>
                                     
                                    
                                     
