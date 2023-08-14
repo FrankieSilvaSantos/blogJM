@@ -15,7 +15,7 @@ export default function Footer() {
     <Link
       className={`text-neutral-800 text-neutral-400 `}
       href="https://tailwind-elements.com/"
-      > <span className={`${styles.spanFooter}`}>BlogJm</span></Link>
+      > <span className={`${styles.spanFooter}`}>GamesBlog</span></Link>
   </div>
 </footer>
 
