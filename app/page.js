@@ -32,8 +32,8 @@ export default async function Home() {
 
    
 
-<div className="container mx-auto">
-            <div className="flex items-center justify-center w-full h-full py-24 sm:py-8 px-4">
+<div className={`container mx-auto ${styles.containerCarouselMain}`}>
+            <div className={`flex items-center justify-center   py-24 sm:py-8 px-4 ${styles.containerCarousel}`}>
                 {/* Carousel for desktop and large size devices */}
                 <CarouselProvider className="lg:block hidden" naturalSlideWidth={30} isIntrinsicHeight={true} totalSlides={4} visibleSlides={3} step={1} infinite={true}>
                     <div className="w-full relative flex items-center justify-center">
@@ -48,19 +48,19 @@ export default async function Home() {
                                     <Slide index={0}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'Alucard').map((post) => (
-                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                      {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
+                                        <div key={index} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                             <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                            
                                             <div className=" bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
+                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title}</h2>
                                             
                                               
                                           
                                                 <div className="flex h-full items-end pb-6">
                                                 <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
+                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
                                                     
                                                 </div>
                                               
@@ -73,50 +73,50 @@ export default async function Home() {
                                     <Slide index={1}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post) => (
-                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                       <div key={index + 1} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
-                                           
-                                            <div className=" bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
-                                            
-                                              
-                                          
-                                                <div className="flex h-full items-end pb-6">
-                                                <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
-                                                    
-                                                </div>
-                                              
-                                            </div>
+                                       <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                       
-                                        </div>
+                                       <div className=" bg-opacity-30 absolute w-full h-full p-6">
+                                           <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
+                                       
+                                         
+                                     
+                                           <div className="flex h-full items-end pb-6">
+                                           <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
+                                               <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
+                                               
+                                           </div>
+                                         
+                                       </div>
+                                 
+                                   </div>
                                          ))}
                                         </Link>
                                     </Slide>
                                     <Slide index={2}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post) => (
-                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                        <div key={index + 2} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
-                                           
-                                            <div className=" bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
-                                            
-                                              
+                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                       
+                                        <div className=" bg-opacity-30 absolute w-full h-full p-6">
+                                            <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
+                                        
                                           
-                                                <div className="flex h-full items-end pb-6">
-                                                <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
-                                                    
-                                                </div>
-                                              
-                                            </div>
                                       
+                                            <div className="flex h-full items-end pb-6">
+                                            <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
+                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
+                                                
+                                            </div>
+                                          
                                         </div>
+                                  
+                                    </div>
                                          ))}
                                         </Link>
                                     </Slide>
@@ -124,25 +124,25 @@ export default async function Home() {
                                     <Slide index={3}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post) => (
-                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                        <div key={index + 3} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
-                                           
-                                            <div className=" bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
-                                            
-                                              
+                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                       
+                                        <div className=" bg-opacity-30 absolute w-full h-full p-6">
+                                            <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
+                                        
                                           
-                                                <div className="flex h-full items-end pb-6">
-                                                <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
-                                                    
-                                                </div>
-                                              
-                                            </div>
                                       
+                                            <div className="flex h-full items-end pb-6">
+                                            <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
+                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
+                                                
+                                            </div>
+                                          
                                         </div>
+                                  
+                                    </div>
                                          ))}
                                         </Link>
                                     </Slide>
@@ -179,22 +179,23 @@ export default async function Home() {
                         <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
                             <Slider>
                                 <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
-                                ///////     <Slide index={0}>
+                               
+                                <Slide index={0}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'Alucard').map((post) => (
-                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                      {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
+                                        <div key={index} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                             <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                            
                                             <div className=" bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
+                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title}</h2>
                                             
                                               
                                           
                                                 <div className="flex h-full items-end pb-6">
                                                 <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
+                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
                                                     
                                                 </div>
                                               
@@ -204,22 +205,23 @@ export default async function Home() {
                                          ))}
                                         </Link>
                                     </Slide>
-                                    <Slide index={1}>
+                               
+                                <Slide index={1}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post) => (
-                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                      {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
+                                        <div key={index + 1} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                             <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                            
                                             <div className=" bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
+                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title}</h2>
                                             
                                               
                                           
                                                 <div className="flex h-full items-end pb-6">
                                                 <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
+                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
                                                     
                                                 </div>
                                               
@@ -232,53 +234,56 @@ export default async function Home() {
                                     <Slide index={2}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post) => (
-                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                        <div key={index + 2} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
-                                           
-                                            <div className=" bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
-                                            
-                                              
+                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                       
+                                        <div className=" bg-opacity-30 absolute w-full h-full p-6">
+                                            <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
+                                        
                                           
-                                                <div className="flex h-full items-end pb-6">
-                                                <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
-                                                    
-                                                </div>
-                                              
-                                            </div>
                                       
+                                            <div className="flex h-full items-end pb-6">
+                                            <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
+                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
+                                                
+                                            </div>
+                                          
                                         </div>
+                                  
+                                    </div>
                                          ))}
                                         </Link>
                                     </Slide>
+
                                     <Slide index={3}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post) => (
-                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                        <div key={index + 3} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
-                                           
-                                            <div className=" bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
-                                            
-                                              
+                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                       
+                                        <div className=" bg-opacity-30 absolute w-full h-full p-6">
+                                            <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
+                                        
                                           
-                                                <div className="flex h-full items-end pb-6">
-                                                <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
-                                                    
-                                                </div>
-                                              
-                                            </div>
                                       
+                                            <div className="flex h-full items-end pb-6">
+                                            <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
+                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
+                                                
+                                            </div>
+                                          
                                         </div>
+                                  
+                                    </div>
                                          ))}
                                         </Link>
                                     </Slide>
+                                    
+                                    
                                 
                                 
                                    
@@ -311,22 +316,22 @@ export default async function Home() {
                         <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
                             <Slider>
                                 <div id="slider" className="h-full w-full flex lg:gap-8 md:gap-6 items-center justify-start transition ease-out duration-700">
-                                    <Slide index={0}>
+                                <Slide index={0}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'Alucard').map((post) => (
-                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                      {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
+                                        <div key={index} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                             <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                            
                                             <div className=" bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
+                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title}</h2>
                                             
                                               
                                           
                                                 <div className="flex h-full items-end pb-6">
                                                 <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
+                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
                                                     
                                                 </div>
                                               
@@ -339,78 +344,83 @@ export default async function Home() {
                                     <Slide index={1}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post) => (
-                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                        <div key={index + 1} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
-                                           
-                                            <div className=" bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
-                                            
-                                              
+                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                       
+                                        <div className=" bg-opacity-30 absolute w-full h-full p-6">
+                                            <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
+                                        
                                           
-                                                <div className="flex h-full items-end pb-6">
-                                                <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
-                                                    
-                                                </div>
-                                              
-                                            </div>
                                       
+                                            <div className="flex h-full items-end pb-6">
+                                            <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
+                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
+                                                
+                                            </div>
+                                          
                                         </div>
+                                  
+                                    </div>
                                          ))}
                                         </Link>
                                     </Slide>
+                                    
                                     <Slide index={2}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post) => (
-                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                        <div key={index + 2} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
-                                           
-                                            <div className=" bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
-                                            
-                                              
+                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                       
+                                        <div className=" bg-opacity-30 absolute w-full h-full p-6">
+                                            <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
+                                        
                                           
-                                                <div className="flex h-full items-end pb-6">
-                                                <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
-                                                    
-                                                </div>
-                                              
-                                            </div>
                                       
+                                            <div className="flex h-full items-end pb-6">
+                                            <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
+                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
+                                                
+                                            </div>
+                                          
                                         </div>
+                                  
+                                    </div>
                                          ))}
                                         </Link>
                                     </Slide>
+
                                     <Slide index={3}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post) => (
-                                        <div className={`flex flex-shrink-0 relative w-full sm:w-auto `}>
+                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                        <div key={index + 3} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
-                                           
-                                            <div className=" bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} - <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span>{post.node.createdAt.replace('T',' - ').substring(0,21)}</h2>
-                                            
-                                              
+                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                       
+                                        <div className=" bg-opacity-30 absolute w-full h-full p-6">
+                                            <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
+                                        
                                           
-                                                <div className="flex h-full items-end pb-6">
-                                                <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name}</h3>
-                                                    
-                                                </div>
-                                              
-                                            </div>
                                       
+                                            <div className="flex h-full items-end pb-6">
+                                            <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
+                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
+                                                
+                                            </div>
+                                          
                                         </div>
+                                  
+                                    </div>
                                          ))}
                                         </Link>
                                     </Slide>
+                                    
+                                    
+                                    
                                     
                                     
                                     
