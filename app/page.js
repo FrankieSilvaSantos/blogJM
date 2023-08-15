@@ -51,7 +51,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
                                         <div key={index} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                            <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                            
                                             <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                                 <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title}</h2>
@@ -76,7 +76,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                        <div key={index + 1} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                       <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                       <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                       
                                        <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                            <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
@@ -101,7 +101,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                         <div key={index + 2} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                        
                                         <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                             <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
@@ -127,7 +127,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                         <div key={index + 3} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                        
                                         <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                             <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
@@ -186,7 +186,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
                                         <div key={index} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                            <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                            
                                             <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                                 <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title}</h2>
@@ -212,7 +212,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
                                         <div key={index + 1} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                            <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                            
                                             <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                                 <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title}</h2>
@@ -237,7 +237,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                         <div key={index + 2} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                        
                                         <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                             <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
@@ -263,7 +263,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                         <div key={index + 3} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                        
                                         <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                             <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
@@ -322,7 +322,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
                                         <div key={index} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                            <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                            
                                             <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                                 <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title}</h2>
@@ -347,7 +347,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                         <div key={index + 1} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                        
                                         <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                             <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
@@ -373,7 +373,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                         <div key={index + 2} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                        
                                         <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                             <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
@@ -399,7 +399,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                         <div key={index + 3} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                        <img src={post.node.featureImage.url} alt="black chair and white table" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
                                        
                                         <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                             <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>

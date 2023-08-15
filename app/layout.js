@@ -6,7 +6,7 @@ import Footer from './footer/page'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'BlogJM',
+  title: 'GamesBlog',
   description: 'Graphql App',
 }
 
