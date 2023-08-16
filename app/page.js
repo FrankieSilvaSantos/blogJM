@@ -25,7 +25,7 @@ export default async function Home() {
         <section className={`${styles.containerHome}`}>
 
 
-  
+    {console.log(posts)}
   
    
    
@@ -46,9 +46,13 @@ export default async function Home() {
                             <Slider>
                                 <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
                                     <Slide index={0}>
-                                      <Link href={'#'} className={`${styles.linkStyles}`}>
+                                   
 
-                                      {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
+                                    {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
+                                   
+                                        <Link href={`/posts/${post.node.slug}`} className={`${styles.linkStyles}`}>
+                                  
+                                  
                                         <div key={index} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                             <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
@@ -67,13 +71,16 @@ export default async function Home() {
                                             </div>
                                       
                                         </div>
-                                         ))}
+                                      
                                         </Link>
+                                           ))}
                                     </Slide>
                                     <Slide index={1}>
-                                      <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                    {posts.filter((name) => name.node.title === 'Isaac').map((post,index) => (
+                                      <Link href={`/posts/${post.node.slug}`} className={`${styles.linkStyles}`}>
+
+                                     
                                        <div key={index + 1} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
@@ -92,13 +99,16 @@ export default async function Home() {
                                        </div>
                                  
                                    </div>
-                                         ))}
+                                        
                                         </Link>
+                                         ))}
                                     </Slide>
                                     <Slide index={2}>
-                                      <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                    {posts.filter((name) => name.node.title === 'Isaac').map((post,index) => (
+                                      <Link href={`/posts/${post.node.slug}`} className={`${styles.linkStyles}`}>
+
+                                      
                                         <div key={index + 2} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                         <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
@@ -117,14 +127,16 @@ export default async function Home() {
                                         </div>
                                   
                                     </div>
-                                         ))}
+                                         
                                         </Link>
+                                        ))}
                                     </Slide>
 
                                     <Slide index={3}>
-                                      <Link href={'#'} className={`${styles.linkStyles}`}>
+                                    {posts.filter((name) => name.node.title === 'Isaac').map((post,index) => (
+                                      <Link href={`/posts/${post.node.slug}`} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                     
                                         <div key={index + 3} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                         <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
@@ -143,8 +155,9 @@ export default async function Home() {
                                         </div>
                                   
                                     </div>
-                                         ))}
+                                        
                                         </Link>
+                                         ))}
                                     </Slide>
                                     
                                    
@@ -181,9 +194,11 @@ export default async function Home() {
                                 <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
                                
                                 <Slide index={0}>
-                                      <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
+                                {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
+                                      <Link href={`/posts/${post.node.slug}`} className={`${styles.linkStyles}`}>
+
+                                      
                                         <div key={index} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                             <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
@@ -202,14 +217,17 @@ export default async function Home() {
                                             </div>
                                       
                                         </div>
-                                         ))}
+                                         
                                         </Link>
+                                        ))}
                                     </Slide>
                                
                                 <Slide index={1}>
-                                      <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                {posts.filter((name) => name.node.title === 'Isaac').map((post,index) => (
+                                      <Link href={`/posts/${post.node.slug}`} className={`${styles.linkStyles}`}>
+
+                                     
                                         <div key={index + 1} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                             <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
@@ -228,13 +246,15 @@ export default async function Home() {
                                             </div>
                                       
                                         </div>
-                                         ))}
+                                        
                                         </Link>
+                                         ))}
                                     </Slide>
                                     <Slide index={2}>
-                                      <Link href={'#'} className={`${styles.linkStyles}`}>
+                                    {posts.filter((name) => name.node.title === 'Isaac').map((post,index) => (
+                                      <Link href={`/posts/${post.node.slug}`} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                             
                                         <div key={index + 2} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                         <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
@@ -253,14 +273,16 @@ export default async function Home() {
                                         </div>
                                   
                                     </div>
-                                         ))}
+                                         
                                         </Link>
+                                        ))}
                                     </Slide>
 
                                     <Slide index={3}>
-                                      <Link href={'#'} className={`${styles.linkStyles}`}>
+                                    {posts.filter((name) => name.node.title === 'Isaac').map((post,index) => (
+                                      <Link href={`/posts/${post.node.slug}`} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                     
                                         <div key={index + 3} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                         <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
@@ -279,8 +301,9 @@ export default async function Home() {
                                         </div>
                                   
                                     </div>
-                                         ))}
+                                    
                                         </Link>
+                                             ))}
                                     </Slide>
                                     
                                     
@@ -317,9 +340,10 @@ export default async function Home() {
                             <Slider>
                                 <div id="slider" className="h-full w-full flex lg:gap-8 md:gap-6 items-center justify-start transition ease-out duration-700">
                                 <Slide index={0}>
-                                      <Link href={'#'} className={`${styles.linkStyles}`}>
+                                {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
+                                      <Link href={`/posts/${post.node.slug}`} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
+                                  
                                         <div key={index} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                             <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHomeSmall}`} />
@@ -338,13 +362,17 @@ export default async function Home() {
                                             </div>
                                       
                                         </div>
-                                         ))}
+                                       
                                         </Link>
+                                          ))}
+
+
                                     </Slide>
                                     <Slide index={1}>
-                                      <Link href={'#'} className={`${styles.linkStyles}`}>
+                                    {posts.filter((name) => name.node.title === 'Isaac').map((post,index) => (
+                                      <Link href={`/posts/${post.node.slug}`} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                
                                         <div key={index + 1} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                         <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHomeSmall}`} />
@@ -363,14 +391,17 @@ export default async function Home() {
                                         </div>
                                   
                                     </div>
-                                         ))}
+                                        
                                         </Link>
+                                         ))}
+
                                     </Slide>
                                     
                                     <Slide index={2}>
-                                      <Link href={'#'} className={`${styles.linkStyles}`}>
+                                    {posts.filter((name) => name.node.title === 'Isaac').map((post,index) => (
+                                      <Link href={`/posts/${post.node.slug}`} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
+                                      
                                         <div key={index + 2} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                         <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHomeSmall}`} />
@@ -389,14 +420,16 @@ export default async function Home() {
                                         </div>
                                   
                                     </div>
-                                         ))}
+                                         
                                         </Link>
+                                        ))}
                                     </Slide>
 
                                     <Slide index={3}>
-                                      <Link href={'#'} className={`${styles.linkStyles}`}>
+                                        
+                                      {posts.filter((name) => name.node.title === 'Isaac').map((post,index) => (
+                                      <Link href={`/posts/${post.node.slug}`} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                         <div key={index + 3} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                         <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHomeSmall}`} />
@@ -415,8 +448,9 @@ export default async function Home() {
                                         </div>
                                   
                                     </div>
-                                         ))}
+                                         
                                         </Link>
+                                        ))}
                                     </Slide>
                                     
                                     

@@ -33,7 +33,7 @@ export default function Header() {
         </button>
       </div>
       <div className={` ${styles.logoPositioning}`}>
-        <img className={`h-8 w-auto ${styles.logoImgHome}`} src="img/logo/logo.png" alt="Your Company"/>
+        <img className={`h-8 w-auto ${styles.logoImgHome}`} src="/img/logo/logo.png" alt="Your Company"/>
             <h1 className={`${styles.tituloLogo}`}>GamesBlog</h1>
         </div>
     
