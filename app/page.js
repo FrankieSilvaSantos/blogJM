@@ -35,7 +35,7 @@ export default async function Home() {
 <div className={`container mx-auto ${styles.containerCarouselMain}`}>
             <div className={`flex items-center justify-center   py-24 sm:py-8 px-4 ${styles.containerCarousel}`}>
                 {/* Carousel for desktop and large size devices */}
-                <CarouselProvider className="lg:block hidden" naturalSlideWidth={30} isIntrinsicHeight={true} totalSlides={4} visibleSlides={3} step={1} infinite={true}>
+                <CarouselProvider className="lg:block hidden" naturalSlideWidth={100} isIntrinsicHeight={true} totalSlides={4} visibleSlides={3} step={1} infinite={true}>
                     <div className="w-full relative flex items-center justify-center">
                         <ButtonBack role="button" aria-label="slide backward" className="absolute z-30 left-0 ml-8 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer" id="prev">
                             <svg width={8} height={14} viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -209,7 +209,7 @@ export default async function Home() {
                                 <Slide index={1}>
                                       <Link href={'#'} className={`${styles.linkStyles}`}>
 
-                                      {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
+                                      {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                         <div key={index + 1} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
                                             <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
@@ -322,7 +322,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'Alucard').map((post,index) => (
                                         <div key={index} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                            <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                            <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHomeSmall}`} />
                                            
                                             <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                                 <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title}</h2>
@@ -330,8 +330,8 @@ export default async function Home() {
                                               
                                           
                                                 <div className="flex h-full items-end pb-6">
-                                                <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
+                                                <img className={`${styles.imgHomeSmall}`}  src={post.node.author.photo.url}/>
+                                                    <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHomeSmall}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
                                                     
                                                 </div>
                                               
@@ -347,7 +347,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                         <div key={index + 1} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHomeSmall}`} />
                                        
                                         <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                             <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
@@ -355,8 +355,8 @@ export default async function Home() {
                                           
                                       
                                             <div className="flex h-full items-end pb-6">
-                                            <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
+                                            <img className={`${styles.imgHomeSmall}`}  src={post.node.author.photo.url}/>
+                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHomeSmall}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
                                                 
                                             </div>
                                           
@@ -373,7 +373,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                         <div key={index + 2} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHomeSmall}`} />
                                        
                                         <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                             <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
@@ -381,8 +381,8 @@ export default async function Home() {
                                           
                                       
                                             <div className="flex h-full items-end pb-6">
-                                            <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
+                                            <img className={`${styles.imgHomeSmall}`}  src={post.node.author.photo.url}/>
+                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHomeSmall}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
                                                 
                                             </div>
                                           
@@ -399,7 +399,7 @@ export default async function Home() {
                                       {posts.filter((name) => name.node.title === 'isaac').map((post,index) => (
                                         <div key={index + 3} className={`flex flex-shrink-0 relative w-full sm:w-auto `} style={{position:'relative'}}>
                                        
-                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHome}`} />
+                                        <img src={post.node.featureImage.url} alt="post image" className={`object-cover object-center w-full ${styles.imgCharacterHomeSmall}`} />
                                        
                                         <div className=" bg-opacity-30 absolute w-full h-full p-6">
                                             <h2 className={`lg:text-xl leading-4 text-base lg:leading-5 font-bold  text-fuchsia-400 ${styles.titleCard}`}>{post.node.title} </h2>
@@ -407,8 +407,8 @@ export default async function Home() {
                                           
                                       
                                             <div className="flex h-full items-end pb-6">
-                                            <img className={`${styles.imgHome}`}  src={post.node.author.photo.url}/>
-                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHome}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
+                                            <img className={`${styles.imgHomeSmall}`}  src={post.node.author.photo.url}/>
+                                                <h3 className={`text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-fuchsia-400 ${styles.pHomeSmall}`}>{post.node.author.name} <span className={`${styles.iconHome}`}><iconify-icon icon="typcn:calendar"></iconify-icon></span><span className={`${styles.spanCardBody}`}>{post.node.createdAt.substring(0,10)}</span></h3>
                                                 
                                             </div>
                                           
