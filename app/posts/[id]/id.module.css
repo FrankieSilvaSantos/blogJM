@@ -29,7 +29,7 @@
 
 .pId {
 
-    font-size:90%;
+    font-size:100%;
     font-weight: 900;
     /* width: auto;
     max-width: 30%; */
@@ -51,7 +51,7 @@ display: flex;
 
     border: 2px solid purple;
     width: auto;
-    max-width: 500px;
+    max-width: 400px;
     padding: 0 20px 40px 20px;
     border-radius: 30px;
     background-color: rgb(214, 165, 214);
