@@ -14,7 +14,7 @@ export default function Footer() {
     © 2023 Copyright:
     <Link
       className={`text-neutral-800 text-neutral-400 `}
-      href="https://tailwind-elements.com/"
+      href="https://github.com/FranzieYoogan/"
       > <span className={`${styles.spanFooter}`}>GamesBlog</span></Link>
   </div>
 </footer>
