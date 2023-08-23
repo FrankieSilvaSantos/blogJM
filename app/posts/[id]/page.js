@@ -1,10 +1,14 @@
-import Postconnection from "@/app/postConnections/page"
+
+import Postconnection from '@/app/postConnections/page'
+import ButtonId from '../buttonId/page'
 import styles from './id.module.css'
+
 
 export default async function Id({params}) {
 
-  const posts = await Postconnection()
-  
+
+const posts = await Postconnection()
+
 
     
   return(
@@ -36,11 +40,22 @@ export default async function Id({params}) {
         </section>
         <section className={`${styles.containerPId}`}>
        <p className={`${styles.pId}`}>{post.node.excerpt}</p>
+       
+
        </section>
+
+       <section className={`${styles.buttonIdContainer}`}>
+       <ButtonId></ButtonId>
+
+
+</section>
     
         </section>
 
         </section>
+
+
+
        
        </section>
        

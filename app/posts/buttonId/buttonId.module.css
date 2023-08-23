@@ -1,0 +1,21 @@
+.buttonIdStyles {
+
+    background-color: purple;
+    transition: 1s;
+
+}
+
+.buttonIdStyles:hover, .buttonIdStyles:active, .buttonIdStyles:focus {
+
+    background-color: transparent;
+    border: 1px solid black;
+   
+}
+
+.commentContainer {
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    
+}
