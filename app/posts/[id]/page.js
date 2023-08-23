@@ -44,11 +44,12 @@ const posts = await Postconnection()
 
        </section>
 
-       <section className={`${styles.buttonIdContainer}`}>
+       
+      
        <ButtonId></ButtonId>
 
+       
 
-</section>
     
         </section>
 

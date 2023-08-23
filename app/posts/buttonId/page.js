@@ -19,9 +19,12 @@ export default function ButtonId() {
     return (
     
         <>
+        <section className={`${styles.containerButtonId}`}>
     <button onClick={() => setComment(true)} className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full ${styles.buttonIdStyles}`}>
   COMMENT
 </button>
+</section>
+
 
 {comment && 
 

@@ -52,7 +52,7 @@ display: flex;
     border: 2px solid purple;
     width: auto;
     max-width: 400px;
-    padding: 0 20px 40px 20px;
+    padding: 0 20px 25px 20px;
     border-radius: 30px;
     background-color: rgb(214, 165, 214);
 }
@@ -69,6 +69,8 @@ display: flex;
 .buttonIdContainer {
 
     float: right;
+   
+    top: ;
 }
 
 
